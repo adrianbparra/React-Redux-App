@@ -5,7 +5,7 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 import { Button,Container,Content,  } from 'react-bulma-components';
 
 import {connect} from "react-redux";
-import {getBoredIdea} from "./actions";
+import {getBoredIdea,getBoredType} from "./actions";
 
 import BoredIdea from "./components/BoredIdea";
 import BoredType from "./components/BoredType";
@@ -13,6 +13,13 @@ import BoredType from "./components/BoredType";
 function App( props ) {
 
   const updateBoredIdea = e => {
+
+    if(props.selectedType !==""){
+      
+      props.getBoredType(props.selectedType);
+
+      return
+    }
 
     props.getBoredIdea();
 
@@ -47,11 +54,12 @@ function App( props ) {
 const mapStatetoProps  = state => {
   return {
     data : state.data,
-    isFetching: state.isFetching
+    isFetching: state.isFetching,
+    selectedType: state.selectedType,
   }
 }
 
 export default connect(mapStatetoProps, {
   getBoredIdea,
-
+  getBoredType,
 })(App);

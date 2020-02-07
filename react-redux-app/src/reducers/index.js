@@ -1,4 +1,4 @@
-import {GET_BORED_DATA, UPDATE_BORED_DATA, ERROR_BORED_DATA, SET_TYPE} from "../actions"
+import {GET_BORED_DATA, UPDATE_BORED_DATA, ERROR_BORED_DATA, SET_TYPE, UPDATE_BORED_TYPE} from "../actions"
 
 
 const initialState = {
@@ -46,6 +46,13 @@ export const boredReducer = (state= initialState, action) => {
             return {
                 ...state,
                 selectedType : action.payload
+            }
+        case UPDATE_BORED_TYPE:
+            return {
+                ...state,
+                isFetching : false,
+                data : action.payload,
+                error: ""
             }
         default :
         return state;

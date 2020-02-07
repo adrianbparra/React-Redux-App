@@ -3,7 +3,7 @@ import React from "react";
 
 const BoredIdea = props => {
 
-    console.log(props.data)
+    // console.log(props.data)
 
     const {activity, accessibility, type, participants, price, link, key} = props.data;
 
