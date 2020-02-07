@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: aliceblue;
+}
+
+.button {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 20em;
+  height: 6em;
+}
+
+.button:hover{
+  color:aquamarine;
+  background-color: black;
+}
