@@ -4,6 +4,9 @@ export const GET_BORED_DATA = "GET_BORED_DATA";
 export const UPDATE_BORED_DATA = "UPDATE_BORED_DATA";
 export const ERROR_BORED_DATA = "ERROR_BORED_DATA";
 
+
+export const SET_TYPE = "SET_TYPE";
+
 export const getBoredIdea = () => dispatch => {
 
     dispatch({type: GET_BORED_DATA});
@@ -19,3 +22,8 @@ export const getBoredIdea = () => dispatch => {
 
 }
 
+export const setType = (type) => dispatch => {
+
+    dispatch({type: SET_TYPE, payload: type})
+    
+}
