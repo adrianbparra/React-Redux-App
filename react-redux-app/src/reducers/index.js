@@ -14,6 +14,7 @@ const initialState = {
         "education",
         "music",
         "charity",
+        "diy"
     ],
     selectedType: ""
 }

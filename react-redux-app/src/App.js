@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import "./css/mystyles.css";
+
 import 'react-bulma-components/dist/react-bulma-components.min.css';
+
 import { Button,Container,Content,  } from 'react-bulma-components';
 
 import {connect} from "react-redux";
@@ -43,7 +46,7 @@ function App( props ) {
         <BoredType />
       </Content>
 
-      <Button className="button" disabled={props.isFetching} color="primary" onClick={updateBoredIdea}>Bored?</Button>
+      <button className="button" disabled={props.isFetching} color="primary" onClick={updateBoredIdea}>Bored?</button>
       <Content>
         {props.data ? <BoredIdea data ={props.data} /> : <p>Just press it to get an idea.</p>}
       </Content>

@@ -27,10 +27,10 @@ export const getBoredType = (type) => dispatch => {
 
     dispatch({type: GET_BORED_DATA});
 
-    axios.get(`{http://www.boredapi.com/api/activity?type=${type}}`)
+    axios.get(`https://www.boredapi.com/api/activity?type=${type}`)
         .then(res => {
             console.log(res);
-            dispatch({type: GET_BORED_DATA, payload: res.data})
+            dispatch({type: UPDATE_BORED_TYPE, payload: res.data})
         })
         .catch(err => {
             console.log(err)
